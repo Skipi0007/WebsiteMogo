@@ -663,7 +663,20 @@ text-align: center;
 .logos {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 0 -15px;
+    }
+
+.logosItem {
+padding: 0 15px;
 }
+
+.logosImg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* Works */
 
@@ -1346,5 +1359,20 @@ text-align: center;
 
     .reviewsBtn {
         top: 18%;
+    }
+
+    /* Logos */
+
+    .logos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logosItem {
+        width: 50%;
+    }
+
+    .logosImg {
+        margin: 0 auto;
     }
 }
