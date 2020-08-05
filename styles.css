@@ -1194,6 +1194,20 @@ padding: 0 15px;
         padding-left: 175px;
     }
 
+    /* Clients */
+
+    .clients {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .clientsItem {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .clientsItem:last-child {
+        margin-bottom: 0;
 }
 
 @media (max-width: 770px) {
@@ -1293,6 +1307,17 @@ padding: 0 15px;
     .reviewsAuthor {
         font-size: 20px;
     }
+
+    /* Works */
+
+    .works {
+        flex-wrap: wrap;
+    }
+
+    .worksCol {
+        flex: none;
+        width: 50%;
+    }
     
 }
 
@@ -1370,9 +1395,33 @@ padding: 0 15px;
 
     .logosItem {
         width: 50%;
+        margin-bottom: 20px;
     }
 
     .logosImg {
         margin: 0 auto;
+    }
+
+      /* Works */
+
+    .worksCol {
+        flex: none;
+        width: 100%;
+    }
+
+      /* Clients */
+
+    .clientsPhoto {
+        position: static;
+    }
+
+    .clientsItem {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .clientsText:before {
+        margin: 15px auto;
     }
 }
