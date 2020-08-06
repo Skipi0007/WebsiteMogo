@@ -795,11 +795,12 @@ padding: 0 15px;
     margin: 15px 0;
 }
 
-/* Хуеверчу сам */
+/* Blog */
 
 .blog{
     justify-content: space-between;
     display: flex;
+    flex-wrap: wrap;
 }    
 
 .blogItem {
@@ -927,8 +928,14 @@ padding: 0 15px;
 
 .footerInner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 65px;
+    margin: 0 -15px;
+}
+
+.footerCol {
+    padding: 0 15px;
 }
 
 .footerCol--first {
@@ -1036,13 +1043,15 @@ padding: 0 15px;
 }
 
 .instagramItem {
-    width: 32.33333%;
+    width: 33%;
     border-bottom: 1px solid #fff;
     
 }
 
 .instagramItem img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Subscribe */
@@ -1208,6 +1217,30 @@ padding: 0 15px;
 
     .clientsItem:last-child {
         margin-bottom: 0;
+    }
+
+    /* Footer */
+
+    .footerCol--first {
+        max-width: 100%;
+    }
+
+    .footerCol--second,
+    .footerCol--third {
+        max-width: 50%;
+    }
+
+       /* Instagram */
+
+    .instagram {
+        justify-content: flex-start;
+    }
+
+    .instagramItem {
+        width: auto;
+        border-right: 1px solid white;
+    }
+
 }
 
 @media (max-width: 770px) {
@@ -1318,6 +1351,30 @@ padding: 0 15px;
         flex: none;
         width: 50%;
     }
+
+    /* Blog */
+
+    .blog {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .blogItem {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .blogsItem:last-child {
+        margin-bottom: 0;
+    }
+
+     /* Footer */
+
+    .footerCol--second,
+    .footerCol--third {
+        max-width: 100%;
+    }
+
     
 }
 
@@ -1424,4 +1481,22 @@ padding: 0 15px;
     .clientsText:before {
         margin: 15px auto;
     }
+
+    /* Subscribe */
+
+    .subscribe {
+        flex-wrap: wrap;
+        max-width: none;
+    }
+
+    .subscribeInput {
+        border-right: 1px solid #e7e7e7;
+        margin-bottom: 10px;
+    }
+
+    .subscribeInput,
+    .subscribeBtn {
+        width: 100%;
+    }
+
 }
