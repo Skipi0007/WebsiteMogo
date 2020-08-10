@@ -56,13 +56,19 @@ hr {
 
 }
 
-.header--fixed {
+.header.fixed {
+    padding: 10px 0;
     background-color: #eb8b8d;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     transform: translate3d(0, 0, 0);
+}
+
+.header.active {
+    background-color: #eb8b8d;
 }
 
 .headerLogo {
@@ -118,6 +124,74 @@ hr {
 .navLink:hover:after {
        opacity: 1;
     
+}
+
+/* Nav-toggle */
+
+.navToggle {
+    width: 30px;
+    padding: 10px 0;
+    display: none;
+    font-size: 0;
+    color: transparent;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 24;
+    right: 24;
+    z-index: 1;
+    
+}
+
+.navToggle.active .navToggle__Item {
+    background: none;
+}
+
+
+
+.navToggle__Item {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: background 0.2s linear;
+}
+
+.navToggle__Item:before,
+.navToggle__Item:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    z-index: 1;
+    transition: transform 0.2s linear;
+}
+
+.navToggle__Item:before {
+    top: -8px;
+}
+
+.navToggle__Item:after {
+    bottom: -8px;
+}
+
+.navToggle.active .navToggle__Item:before {
+    transform-origin: left top;
+    transform: rotate(45deg) translate3d(0px, -2px, 0);
+}
+
+.navToggle.active .navToggle__Item:after {
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translate3d(0px, 3px, 0);
 }
 
     /* Intro */
@@ -1269,6 +1343,12 @@ padding: 0 15px;
         min-height: 650px;
     }
 
+    /* Header */
+
+    .header {
+        padding: 10px 0;
+    }
+
     /* Card */
 
     .card {
@@ -1306,8 +1386,26 @@ padding: 0 15px;
     /* Nav */
 
     .nav {
+        width: 100%;
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #eb8b8d;
     }
+
+    .navLink {
+        display: block;
+        margin: 0;
+        padding: 8px 20px;
+    }
+
+    /* Nav-toggle */
+
+.navToggle {
+    display: block;
+}
+
     /* Intro */
 
     .introSubitle {
@@ -1318,49 +1416,7 @@ padding: 0 15px;
         font-size: 40;
     }
 
-    /* Nav-toggle */
-
-    .navToggle {
-        width: 30px;
-        padding: 10px 0;
-        position: absolute;
-        top: 30;
-        right: 30;
-        z-index: 1;
-        
-    }
-
-    .navToggle__Item {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-    }
-
-    .navToggle__Item:before,
-    .navToggle__Item:after {
-        content: "";
-        width: 100%;
-        height: 3px;
-        position: absolute;
-        background-color: #fff;
-        left: 0;
-        z-index: 1;
-    }
-
-    .navToggle__Item:before {
-        top: -8px;
-    }
-
-    .navToggle__Item:after {
-        bottom: -8px;
-    }
+    
     
     /* Services */
 
